@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Учёт сотрудников</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="layout">
+    <header class="header">
+      <div class="header__inner">
+        <div class="header__title-wrap">
+          <h1 class="header__title">Учёт сотрудников</h1>
+          <p class="header__subtitle">Кадровая информационная система</p>
+        </div>
+        <div class="stats-bar" id="statsBar">
+          <div class="stat-card">
+            <span class="stat-card__label">Всего</span>
+            <span class="stat-card__value" id="statTotal">—</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__label">Работают</span>
+            <span class="stat-card__value stat-card__value--active" id="statActive">—</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__label">Уволены</span>
+            <span class="stat-card__value stat-card__value--fired" id="statFired">—</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="content">
+      <div id="statusMessage" class="status-box" role="status" hidden></div>
+
+      <div class="table-card" id="tableCard">
+        <div class="table-wrapper">
+          <table class="employees-table" id="employeesTable">
+            <thead>
+              <tr>
+                <th scope="col" class="th-name">ФИО</th>
+                <th scope="col" class="th-date">Дата рождения</th>
+                <th scope="col" class="th-passport">Паспорт</th>
+                <th scope="col" class="th-phone">Телефон</th>
+                <th scope="col" class="th-address">Адрес проживания</th>
+                <th scope="col" class="th-dept">Отдел</th>
+                <th scope="col" class="th-pos">Должность</th>
+                <th scope="col" class="th-salary">Зарплата</th>
+                <th scope="col" class="th-hire">Дата приёма</th>
+                <th scope="col" class="th-status">Статус</th>
+              </tr>
+            </thead>
+            <tbody id="employeesTbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
